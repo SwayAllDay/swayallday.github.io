@@ -238,20 +238,20 @@ body{
 
 .spotlight-carousel{
   width:100%;
-  max-width:1250px;
+  max-width:1350px;
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:42px;
+  gap:64px;
   margin:0 auto;
 }
 
 .spotlight-card{
   position:relative;
-  width:330px;
-  background:rgba(10,10,10,0.92);
-  border:1px solid rgba(255,255,255,0.10);
-  padding:18px 18px 24px;
+  width:350px;
+  background:rgba(10,10,10,0.82);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:24px 24px 30px;
   text-decoration:none;
   color:white;
   transition:0.45s ease;
@@ -275,7 +275,7 @@ body{
   aspect-ratio:1 / 1;
   overflow:hidden;
   background:#111;
-  margin-bottom:22px;
+  margin-bottom:28px;
 }
 
 .cover-wrap img{
@@ -292,11 +292,11 @@ body{
 
 .spotlight-card h2{
   text-align:center;
-  font-size:15px;
+  font-size:14px;
   text-transform:uppercase;
-  letter-spacing:2.3px;
-  line-height:1.45;
-  min-height:44px;
+  letter-spacing:2.8px;
+  line-height:1.6;
+  min-height:46px;
 }
 
 .release-badge{
@@ -327,11 +327,13 @@ body{
     justify-content:flex-start;
     scroll-snap-type:x mandatory;
     padding:25px 0 35px;
+    gap:28px;
   }
 
   .spotlight-card{
     flex:0 0 78vw;
     scroll-snap-align:center;
+    width:auto;
   }
 
 }
@@ -343,7 +345,20 @@ body{
   }
 
   .spotlight-carousel{
-    gap:20px;
+    gap:22px;
+  }
+
+  .spotlight-card{
+    padding:18px 18px 24px;
+  }
+
+  .cover-wrap{
+    margin-bottom:22px;
+  }
+
+  .spotlight-card h2{
+    font-size:13px;
+    letter-spacing:2.2px;
   }
 
 }
