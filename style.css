@@ -516,6 +516,7 @@ body{
 .demo-heading{
   text-align:center;
   margin-bottom:70px;
+  width:100%;
 }
 
 .demo-heading h1{
@@ -533,6 +534,16 @@ body{
   font-size:17px;
   letter-spacing:1px;
   line-height:1.7;
+}
+
+.demo-sub-note{
+  display:block;
+  margin-top:14px;
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.58);
+  text-align:center;
 }
 
 .demo-form{
@@ -560,23 +571,6 @@ body{
   opacity:0.92;
 }
 
-.input-group input[type="file"]{
-  cursor:pointer;
-}
-
-.input-group input[type="file"]::file-selector-button{
-  margin-right:18px;
-  background:white;
-  color:black;
-  border:none;
-  padding:12px 18px;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  cursor:pointer;
-}
-
 @media (max-width:768px){
 
   .demo-page{
@@ -590,22 +584,13 @@ body{
   .demo-heading h1{
     font-size:48px;
     letter-spacing:3px;
+    white-space:normal;
   }
 
   .demo-heading p{
     font-size:15px;
   }
 
-}
-
-.demo-sub-note{
-  display:block;
-  margin-top:14px;
-  font-size:13px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:rgba(255,255,255,0.58);
-  text-align:center;
 }
 
 /* EVENTS PAGE */
