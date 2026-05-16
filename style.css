@@ -607,6 +607,23 @@ body{
 
 /* EVENTS PAGE */
 
+.events-page{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255,255,255,0.04), transparent 28%),
+    #050505;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:160px 42px 100px;
+  text-align:center;
+}
+
+.events-message{
+  max-width:760px;
+}
+
 .events-label{
   display:inline-block;
   margin-bottom:42px;
@@ -625,4 +642,22 @@ body{
   line-height:1.9;
   letter-spacing:0.6px;
   max-width:720px;
+}
+
+@media (max-width:768px){
+
+  .events-page{
+    padding:140px 22px 80px;
+  }
+
+  .events-label{
+    font-size:14px;
+    letter-spacing:4px;
+    padding:18px 30px;
+  }
+
+  .events-message p{
+    font-size:15px;
+  }
+
 }
