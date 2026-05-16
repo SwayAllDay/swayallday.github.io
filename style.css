@@ -609,12 +609,12 @@ body{
 
 .events-label{
   display:inline-block;
-  margin-bottom:34px;
-  padding:18px 34px;
+  margin-bottom:42px;
+  padding:24px 42px;
   border:1px solid rgba(255,255,255,0.16);
   color:white;
-  font-size:14px;
-  letter-spacing:5px;
+  font-size:18px;
+  letter-spacing:7px;
   text-transform:uppercase;
   background:rgba(255,255,255,0.03);
 }
