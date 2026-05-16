@@ -757,9 +757,10 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
   gap:28px;
-  max-width:900px;
+  width:100%;
+  max-width:1400px;
   margin:0 auto 42px;
 }
 
@@ -809,6 +810,7 @@ body{
   }
 
   .footer-socials{
+    flex-wrap:wrap;
     gap:18px;
   }
 
