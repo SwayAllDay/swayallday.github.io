@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | ZOYA</title>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 
 <body>
@@ -28,43 +28,37 @@
 
     <div class="contact-heading">
       <h1>Contact</h1>
-
-      <p>
-        For bookings, collaborations, press inquiries and general contact.
-      </p>
+      <p>For bookings, collaborations, press inquiries and general contact.</p>
     </div>
 
     <form
-      action="https://formsubmit.co/info@swayallday.nl"
+      action="https://formspree.io/f/xqejzayk"
       method="POST"
       class="contact-form"
     >
-
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Website Contact Form Submission">
 
       <div class="form-row">
 
         <div class="input-group">
           <label>First Name</label>
-          <input type="text" name="First Name" required>
+          <input type="text" name="first_name" required>
         </div>
 
         <div class="input-group">
           <label>Last Name</label>
-          <input type="text" name="Last Name" required>
+          <input type="text" name="last_name" required>
         </div>
 
       </div>
 
       <div class="input-group">
         <label>Email Address</label>
-        <input type="email" name="Email" required>
+        <input type="email" name="email" required>
       </div>
 
       <div class="input-group">
         <label>Message</label>
-        <textarea name="Message" rows="7" required></textarea>
+        <textarea name="message" rows="7" required></textarea>
       </div>
 
       <button type="submit" class="contact-button">
