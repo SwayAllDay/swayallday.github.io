@@ -221,124 +221,163 @@ body{
 
 }
 
-/* MUSIC PAGE ONLY - DOES NOT AFFECT HOMEPAGE */
+/* MUSIC PAGE ONLY */
 
 .music-only-page{
   min-height:100vh;
   background:#050505;
   color:white;
-  padding:150px 42px 90px;
+  padding:155px 42px 95px;
+  overflow:hidden;
 }
 
 .music-hero-title{
   text-align:center;
-  margin-bottom:58px;
+  margin-bottom:70px;
 }
 
 .music-hero-title h1{
-  font-size:clamp(42px, 7vw, 92px);
+  font-size:clamp(28px, 4vw, 58px);
   text-transform:uppercase;
-  letter-spacing:6px;
-  line-height:1;
-  margin-bottom:18px;
+  letter-spacing:5px;
+  line-height:1.15;
+  font-weight:800;
+  max-width:1100px;
+  margin:0 auto;
 }
 
-.music-hero-title p{
-  font-size:17px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:#d0d0d0;
-  opacity:0.78;
-}
-
-.music-carousel{
+.spotlight-carousel{
   display:flex;
-  gap:28px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  padding:10px 0 28px;
+  justify-content:center;
+  align-items:center;
+  gap:34px;
+  max-width:1250px;
+  margin:0 auto;
 }
 
-.music-carousel::-webkit-scrollbar{
-  height:6px;
-}
-
-.music-carousel::-webkit-scrollbar-track{
-  background:rgba(255,255,255,0.08);
-}
-
-.music-carousel::-webkit-scrollbar-thumb{
-  background:rgba(255,255,255,0.35);
-}
-
-.music-release-card{
-  flex:0 0 340px;
-  scroll-snap-align:center;
-  background:#0b0b0b;
-  border:1px solid rgba(255,255,255,0.1);
+.spotlight-card{
+  background:#0a0a0a;
+  border:1px solid rgba(255,255,255,0.10);
   padding:18px;
-  transition:0.3s ease;
+  transition:0.35s ease;
 }
 
-.music-release-card:hover{
-  transform:translateY(-5px);
+.side-card{
+  width:300px;
+  opacity:0.58;
+  transform:scale(0.92);
+}
+
+.main-card{
+  width:390px;
+  opacity:1;
+  transform:scale(1);
+  position:relative;
   border-color:rgba(255,255,255,0.28);
+  box-shadow:0 0 45px rgba(255,255,255,0.06);
 }
 
-.music-release-card img{
+.spotlight-card:hover{
+  opacity:1;
+  transform:translateY(-6px) scale(1);
+  border-color:rgba(255,255,255,0.32);
+}
+
+.cover-wrap{
   width:100%;
-  height:304px;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  margin-bottom:20px;
+  background:#111;
+}
+
+.cover-wrap img{
+  width:100%;
+  height:100%;
   object-fit:cover;
   display:block;
-  margin-bottom:18px;
+  transition:0.5s ease;
 }
 
-.music-release-card h2{
+.spotlight-card:hover .cover-wrap img{
+  transform:scale(1.045);
+}
+
+.spotlight-card h2{
   font-size:15px;
   text-transform:uppercase;
   letter-spacing:2px;
   line-height:1.4;
-  margin-bottom:16px;
+  margin-bottom:18px;
   min-height:42px;
 }
 
-.music-release-card iframe{
+.spotify-frame{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;
+  padding:6px;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+.spotify-frame iframe{
   border-radius:10px;
   border:none;
   display:block;
 }
 
+.release-badge{
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  background:white;
+  color:black;
+  padding:8px 16px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+@media (max-width:1000px){
+
+  .spotlight-carousel{
+    overflow-x:auto;
+    justify-content:flex-start;
+    scroll-snap-type:x mandatory;
+    padding-bottom:24px;
+  }
+
+  .spotlight-card{
+    flex:0 0 82vw;
+    scroll-snap-align:center;
+  }
+
+  .side-card,
+  .main-card{
+    width:auto;
+    opacity:1;
+    transform:none;
+  }
+
+}
+
 @media (max-width:768px){
 
   .music-only-page{
-    padding:140px 22px 70px;
+    padding:140px 22px 75px;
   }
 
   .music-hero-title{
-    margin-bottom:42px;
+    margin-bottom:46px;
   }
 
   .music-hero-title h1{
-    font-size:42px;
-    letter-spacing:3px;
-  }
-
-  .music-hero-title p{
-    font-size:12px;
-    letter-spacing:1.6px;
-  }
-
-  .music-carousel{
-    gap:18px;
-  }
-
-  .music-release-card{
-    flex:0 0 82vw;
-  }
-
-  .music-release-card img{
-    height:auto;
-    aspect-ratio:1 / 1;
+    font-size:31px;
+    letter-spacing:2.5px;
   }
 
 }
