@@ -519,10 +519,11 @@ body{
 }
 
 .demo-heading h1{
-  font-size:clamp(42px, 6vw, 82px);
+  font-size:clamp(42px, 5vw, 82px);
   text-transform:uppercase;
   letter-spacing:5px;
   margin-bottom:20px;
+  white-space:nowrap;
 }
 
 .demo-heading p{
