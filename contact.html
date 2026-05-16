@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ZOYA</title>
+  <link rel="stylesheet" href="style.css?v=6" />
+</head>
+
+<body>
+
+<header class="navbar page-navbar">
+  <a href="index.html" class="nav-logo">ZOYA</a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="merch.html">Merch</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="demo.html">Send Demo</a>
+  </nav>
+</header>
+
+<main class="contact-page">
+
+  <section class="contact-wrapper">
+
+    <div class="contact-heading">
+      <h1>Contact</h1>
+
+      <p>
+        For bookings, collaborations, press inquiries and general contact.
+      </p>
+    </div>
+
+    <form
+      action="https://formsubmit.co/info@swayallday.nl"
+      method="POST"
+      class="contact-form"
+    >
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Website Contact Form Submission">
+
+      <div class="form-row">
+
+        <div class="input-group">
+          <label>First Name</label>
+          <input type="text" name="First Name" required>
+        </div>
+
+        <div class="input-group">
+          <label>Last Name</label>
+          <input type="text" name="Last Name" required>
+        </div>
+
+      </div>
+
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" name="Email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Message</label>
+        <textarea name="Message" rows="7" required></textarea>
+      </div>
+
+      <button type="submit" class="contact-button">
+        Send Message
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
+
+</body>
+</html>
