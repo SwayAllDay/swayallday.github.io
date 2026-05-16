@@ -524,6 +524,8 @@ body{
   letter-spacing:5px;
   margin-bottom:20px;
   white-space:nowrap;
+  text-align:center;
+  width:100%;
 }
 
 .demo-heading p{
