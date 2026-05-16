@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send Demo | ZOYA</title>
+  <link rel="stylesheet" href="style.css?v=10" />
+</head>
+
+<body>
+
+<header class="navbar page-navbar">
+  <a href="index.html" class="nav-logo">ZOYA</a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="merch.html">Merch</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="demo.html">Send Demo</a>
+  </nav>
+</header>
+
+<main class="demo-page">
+
+  <section class="demo-wrapper">
+
+    <div class="demo-heading">
+      <h1>Send Demo</h1>
+      <p>Submit your music for consideration by ZOYA / Sway All Day. Please send a private SoundCloud link.</p>
+    </div>
+
+    <form
+      action="https://formspree.io/f/xqejzayk"
+      method="POST"
+      class="demo-form"
+    >
+
+      <div class="input-group">
+        <label>Artist Name</label>
+        <input type="text" name="artist_name" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Private SoundCloud Link</label>
+        <input type="url" name="private_soundcloud_link" placeholder="https://soundcloud.com/..." required>
+      </div>
+
+      <div class="input-group">
+        <label>Write something about your track</label>
+        <textarea name="track_description" rows="7" required></textarea>
+      </div>
+
+      <button type="submit" class="demo-button">
+        Submit Demo
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
+
+</body>
+</html>
