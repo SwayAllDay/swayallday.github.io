@@ -221,80 +221,61 @@ body{
 
 }
 
-/* MUSIC PAGE ONLY - PREMIUM SPOTLIGHT VERSION */
+/* MUSIC PAGE ONLY - CLEAN CLICKABLE CAROUSEL */
 
 .music-only-page{
   min-height:100vh;
   background:
-    radial-gradient(circle at 50% 38%, rgba(255,255,255,0.045), transparent 28%),
+    radial-gradient(circle at 50% 42%, rgba(255,255,255,0.045), transparent 30%),
     #050505;
   color:white;
-  padding:150px 42px 110px;
+  padding:155px 42px 95px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   overflow:hidden;
 }
 
-.music-hero-title{
-  text-align:center;
-  margin-bottom:88px;
-}
-
-.music-hero-title h1{
-  font-size:clamp(28px, 3.5vw, 54px);
-  text-transform:none;
-  letter-spacing:1.8px;
-  line-height:1.18;
-  font-weight:400;
-  max-width:980px;
-  margin:0 auto;
-  color:#f4f4f4;
-}
-
 .spotlight-carousel{
+  width:100%;
+  max-width:1250px;
   display:flex;
   justify-content:center;
-  align-items:flex-start;
-  gap:38px;
-  max-width:1380px;
+  align-items:center;
+  gap:42px;
   margin:0 auto;
 }
 
 .spotlight-card{
-  background:rgba(10,10,10,0.92);
-  border:1px solid rgba(255,255,255,0.09);
-  padding:18px;
-  transition:0.55s ease;
-}
-
-.side-card{
-  width:300px;
-  opacity:0.42;
-  transform:scale(0.88);
-  margin-top:60px;
-}
-
-.main-card{
-  width:420px;
-  opacity:1;
-  transform:scale(1);
   position:relative;
-  border-color:rgba(255,255,255,0.24);
-  box-shadow:
-    0 0 70px rgba(255,255,255,0.08),
-    0 0 120px rgba(120,70,255,0.07);
+  width:330px;
+  background:rgba(10,10,10,0.92);
+  border:1px solid rgba(255,255,255,0.10);
+  padding:18px 18px 24px;
+  text-decoration:none;
+  color:white;
+  transition:0.45s ease;
 }
 
 .spotlight-card:hover{
-  opacity:1;
-  transform:translateY(-8px) scale(1);
+  transform:translateY(-8px);
   border-color:rgba(255,255,255,0.34);
+  box-shadow:0 0 55px rgba(255,255,255,0.08);
+}
+
+.latest-release{
+  border-color:rgba(255,255,255,0.32);
+  box-shadow:
+    0 0 60px rgba(255,255,255,0.08),
+    0 0 110px rgba(120,70,255,0.07);
 }
 
 .cover-wrap{
   width:100%;
   aspect-ratio:1 / 1;
   overflow:hidden;
-  margin-bottom:22px;
   background:#111;
+  margin-bottom:22px;
 }
 
 .cover-wrap img{
@@ -302,7 +283,7 @@ body{
   height:100%;
   object-fit:cover;
   display:block;
-  transition:0.75s ease;
+  transition:0.65s ease;
 }
 
 .spotlight-card:hover .cover-wrap img{
@@ -310,27 +291,12 @@ body{
 }
 
 .spotlight-card h2{
-  font-size:14px;
+  text-align:center;
+  font-size:15px;
   text-transform:uppercase;
-  letter-spacing:2.2px;
-  line-height:1.4;
-  margin-bottom:20px;
-  min-height:40px;
-}
-
-.spotify-frame{
-  background:rgba(255,255,255,0.055);
-  border:1px solid rgba(255,255,255,0.075);
-  border-radius:18px;
-  padding:8px;
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-}
-
-.spotify-frame iframe{
-  border-radius:14px;
-  border:none;
-  display:block;
+  letter-spacing:2.3px;
+  line-height:1.45;
+  min-height:44px;
 }
 
 .release-badge{
@@ -346,28 +312,26 @@ body{
   letter-spacing:2.2px;
   text-transform:uppercase;
   white-space:nowrap;
+  z-index:2;
 }
 
 @media (max-width:1000px){
+
+  .music-only-page{
+    justify-content:flex-start;
+    overflow-x:hidden;
+  }
 
   .spotlight-carousel{
     overflow-x:auto;
     justify-content:flex-start;
     scroll-snap-type:x mandatory;
-    padding-bottom:30px;
+    padding:25px 0 35px;
   }
 
   .spotlight-card{
-    flex:0 0 82vw;
+    flex:0 0 78vw;
     scroll-snap-align:center;
-  }
-
-  .side-card,
-  .main-card{
-    width:auto;
-    opacity:1;
-    transform:none;
-    margin-top:0;
   }
 
 }
@@ -375,21 +339,11 @@ body{
 @media (max-width:768px){
 
   .music-only-page{
-    padding:135px 22px 80px;
+    padding:130px 22px 70px;
   }
 
-  .music-hero-title{
-    margin-bottom:52px;
-  }
-
-  .music-hero-title h1{
-    font-size:31px;
-    letter-spacing:0.8px;
-    line-height:1.25;
-  }
-
-  .spotify-frame iframe{
-    height:352px;
+  .spotlight-carousel{
+    gap:20px;
   }
 
 }
