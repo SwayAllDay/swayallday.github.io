@@ -220,3 +220,125 @@ body{
   }
 
 }
+
+/* MUSIC PAGE ONLY - DOES NOT AFFECT HOMEPAGE */
+
+.music-only-page{
+  min-height:100vh;
+  background:#050505;
+  color:white;
+  padding:150px 42px 90px;
+}
+
+.music-hero-title{
+  text-align:center;
+  margin-bottom:58px;
+}
+
+.music-hero-title h1{
+  font-size:clamp(42px, 7vw, 92px);
+  text-transform:uppercase;
+  letter-spacing:6px;
+  line-height:1;
+  margin-bottom:18px;
+}
+
+.music-hero-title p{
+  font-size:17px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#d0d0d0;
+  opacity:0.78;
+}
+
+.music-carousel{
+  display:flex;
+  gap:28px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding:10px 0 28px;
+}
+
+.music-carousel::-webkit-scrollbar{
+  height:6px;
+}
+
+.music-carousel::-webkit-scrollbar-track{
+  background:rgba(255,255,255,0.08);
+}
+
+.music-carousel::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,0.35);
+}
+
+.music-release-card{
+  flex:0 0 340px;
+  scroll-snap-align:center;
+  background:#0b0b0b;
+  border:1px solid rgba(255,255,255,0.1);
+  padding:18px;
+  transition:0.3s ease;
+}
+
+.music-release-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(255,255,255,0.28);
+}
+
+.music-release-card img{
+  width:100%;
+  height:304px;
+  object-fit:cover;
+  display:block;
+  margin-bottom:18px;
+}
+
+.music-release-card h2{
+  font-size:15px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  line-height:1.4;
+  margin-bottom:16px;
+  min-height:42px;
+}
+
+.music-release-card iframe{
+  border-radius:10px;
+  border:none;
+  display:block;
+}
+
+@media (max-width:768px){
+
+  .music-only-page{
+    padding:140px 22px 70px;
+  }
+
+  .music-hero-title{
+    margin-bottom:42px;
+  }
+
+  .music-hero-title h1{
+    font-size:42px;
+    letter-spacing:3px;
+  }
+
+  .music-hero-title p{
+    font-size:12px;
+    letter-spacing:1.6px;
+  }
+
+  .music-carousel{
+    gap:18px;
+  }
+
+  .music-release-card{
+    flex:0 0 82vw;
+  }
+
+  .music-release-card img{
+    height:auto;
+    aspect-ratio:1 / 1;
+  }
+
+}
