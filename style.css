@@ -821,3 +821,62 @@ body{
   }
 
 }
+
+/* HOMEPAGE HERO ANIMATION */
+
+.hero{
+  overflow:hidden;
+  animation:heroFadeIn 1.4s ease both;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("zoya-hero.jpg");
+  background-size:cover;
+  background-position:center top;
+  z-index:0;
+  animation:heroSlowZoom 18s ease forwards;
+}
+
+.hero{
+  background-image:none;
+}
+
+.hero-overlay{
+  z-index:1;
+}
+
+.hero-text{
+  animation:heroTextRise 1.3s ease 0.25s both;
+}
+
+@keyframes heroSlowZoom{
+  from{
+    transform:scale(1);
+  }
+  to{
+    transform:scale(1.08);
+  }
+}
+
+@keyframes heroFadeIn{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes heroTextRise{
+  from{
+    opacity:0;
+    transform:translateY(28px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
