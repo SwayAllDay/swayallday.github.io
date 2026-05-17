@@ -1069,3 +1069,167 @@ body{
   }
 
 }
+
+/* COOKIE SETTINGS POPUP */
+
+.cookie-panel{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  pointer-events:none;
+}
+
+.cookie-box{
+  position:fixed;
+  left:28px;
+  bottom:28px;
+  width:395px;
+  max-width:calc(100vw - 56px);
+  background:#f4f4f4;
+  color:#111;
+  padding:30px;
+  opacity:0;
+  transform:translateX(-24px);
+  pointer-events:none;
+  transition:0.35s ease;
+  box-shadow:0 18px 60px rgba(0,0,0,0.28);
+}
+
+.cookie-panel.active .cookie-box{
+  opacity:1;
+  transform:translateX(0);
+  pointer-events:auto;
+}
+
+.cookie-close{
+  position:absolute;
+  top:14px;
+  right:16px;
+  background:none;
+  border:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.cookie-box h2{
+  font-size:28px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+  letter-spacing:1px;
+}
+
+.cookie-box p{
+  font-size:17px;
+  line-height:1.45;
+  margin-bottom:22px;
+  color:#555;
+}
+
+.cookie-box a{
+  color:#111;
+  text-decoration:underline;
+}
+
+.cookie-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:22px;
+}
+
+.cookie-row strong{
+  display:block;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.cookie-row span{
+  display:block;
+  font-size:16px;
+  line-height:1.45;
+  color:#555;
+}
+
+.cookie-row em{
+  font-style:normal;
+  font-size:14px;
+  white-space:nowrap;
+  color:#555;
+}
+
+.cookie-switch{
+  position:relative;
+  width:42px;
+  height:24px;
+  flex:0 0 auto;
+}
+
+.cookie-switch input{
+  display:none;
+}
+
+.cookie-switch span{
+  position:absolute;
+  inset:0;
+  background:#ccc;
+  border-radius:999px;
+  cursor:pointer;
+}
+
+.cookie-switch span::before{
+  content:"";
+  position:absolute;
+  width:18px;
+  height:18px;
+  left:3px;
+  top:3px;
+  background:white;
+  border-radius:50%;
+  transition:0.25s ease;
+}
+
+.cookie-switch input:checked + span{
+  background:#111;
+}
+
+.cookie-switch input:checked + span::before{
+  transform:translateX(18px);
+}
+
+.cookie-actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-top:10px;
+}
+
+.cookie-link{
+  background:none;
+  border:none;
+  border-bottom:1px solid #111;
+  font-size:16px;
+  cursor:pointer;
+  padding:0;
+}
+
+.cookie-save{
+  background:#050505;
+  color:white;
+  border:none;
+  padding:15px 24px;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+@media (max-width:768px){
+  .cookie-box{
+    left:18px;
+    bottom:18px;
+    width:calc(100vw - 36px);
+    padding:24px;
+  }
+}
