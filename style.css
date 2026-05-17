@@ -734,11 +734,10 @@ body{
   align-items:center;
   flex-wrap:wrap;
   gap:14px;
-  margin-bottom:40px;
+  margin-bottom:48px;
 }
 
-.footer-nav a,
-.footer-socials a{
+.footer-nav a{
   position:relative;
   color:rgba(255,255,255,0.68);
   text-decoration:none;
@@ -753,19 +752,7 @@ body{
   font-size:12px;
 }
 
-.footer-socials{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:nowrap;
-  gap:28px;
-  width:100%;
-  max-width:1400px;
-  margin:0 auto 42px;
-}
-
-.footer-nav a::after,
-.footer-socials a::after{
+.footer-nav a::after{
   content:"";
   position:absolute;
   left:0;
@@ -776,14 +763,61 @@ body{
   transition:0.35s ease;
 }
 
-.footer-nav a:hover,
-.footer-socials a:hover{
+.footer-nav a:hover{
   color:white;
 }
 
-.footer-nav a:hover::after,
-.footer-socials a:hover::after{
+.footer-nav a:hover::after{
   width:100%;
+}
+
+.footer-follow-title{
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:22px;
+}
+
+.footer-icon-grid{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  max-width:760px;
+  margin:0 auto 46px;
+  border:1px solid rgba(255,255,255,0.16);
+}
+
+.footer-icon-grid a{
+  width:95px;
+  height:86px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-decoration:none;
+  border-right:1px solid rgba(255,255,255,0.16);
+  transition:0.35s ease;
+}
+
+.footer-icon-grid a:last-child{
+  border-right:none;
+}
+
+.footer-icon-grid a:hover{
+  background:white;
+  color:black;
+}
+
+.footer-icon-grid svg{
+  width:30px;
+  height:30px;
+  color:white;
+  transition:0.35s ease;
+}
+
+.footer-icon-grid a:hover svg{
+  color:black;
 }
 
 .footer-copy{
@@ -806,18 +840,21 @@ body{
 
   .footer-nav{
     gap:10px;
-    margin-bottom:34px;
+    margin-bottom:38px;
   }
 
-  .footer-socials{
-    flex-wrap:wrap;
-    gap:18px;
-  }
-
-  .footer-nav a,
-  .footer-socials a{
+  .footer-nav a{
     font-size:10px;
     letter-spacing:2px;
+  }
+
+  .footer-icon-grid{
+    max-width:360px;
+  }
+
+  .footer-icon-grid a{
+    width:90px;
+    height:78px;
   }
 
 }
