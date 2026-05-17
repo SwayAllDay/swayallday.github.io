@@ -854,22 +854,6 @@ body{
 }
 
 /* =========================
-   TEXT ICONS
-========================= */
-
-.icon-text{
-  font-size:15px;
-  font-weight:800;
-  letter-spacing:2px;
-  transition:0.35s ease;
-}
-
-.footer-icon-grid a:hover .icon-text{
-  color:black;
-  transform:translateY(-10px);
-}
-
-/* =========================
    HOVER EFFECT
 ========================= */
 
@@ -917,6 +901,19 @@ body{
 }
 
 /* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* =========================
    COPYRIGHT
 ========================= */
 
@@ -925,6 +922,29 @@ body{
   font-size:11px;
   letter-spacing:2px;
   text-transform:uppercase;
+}
+
+/* =========================
+   LEGAL LINKS
+========================= */
+
+.footer-legal{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.footer-legal a{
+  color:rgba(255,255,255,0.58);
+  text-decoration:none;
+  font-size:11px;
+  letter-spacing:0.4px;
+  transition:0.3s ease;
+}
+
+.footer-legal a:hover{
+  color:white;
 }
 
 /* =========================
@@ -971,66 +991,17 @@ body{
     height:26px;
   }
 
-}
-/* HOMEPAGE HERO ANIMATION */
-
-.hero{
-  overflow:hidden;
-  animation:heroFadeIn 1.4s ease both;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:url("zoya-hero.jpg");
-  background-size:cover;
-  background-position:center top;
-  z-index:0;
-  animation:heroSlowZoom 18s ease forwards;
-}
-
-.hero{
-  background-image:none;
-}
-
-.hero-overlay{
-  z-index:1;
-}
-
-.hero-text{
-  animation:heroTextRise 1.3s ease 0.25s both;
-}
-
-@keyframes heroSlowZoom{
-  from{
-    transform:scale(1);
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
   }
-  to{
-    transform:scale(1.08);
-  }
-}
 
-@keyframes heroFadeIn{
-  from{
-    opacity:0;
+  .footer-legal{
+    justify-content:center;
+    gap:18px;
   }
-  to{
-    opacity:1;
-  }
-}
 
-@keyframes heroTextRise{
-  from{
-    opacity:0;
-    transform:translateY(28px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
 }
-
 /* FEATURED RELEASE - HOMEPAGE */
 
 .featured-release{
