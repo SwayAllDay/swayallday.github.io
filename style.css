@@ -697,7 +697,9 @@ body{
   }
 
 }
-/* GLOBAL FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .site-footer{
   position:relative;
@@ -718,15 +720,30 @@ body{
   transform:translateX(-50%);
   width:70%;
   height:1px;
-  background:linear-gradient(to right, transparent, rgba(255,255,255,0.28), transparent);
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255,255,255,0.28),
+      transparent
+    );
 }
+
+/* =========================
+   BRAND
+========================= */
 
 .footer-brand{
   font-size:30px;
   font-weight:800;
   letter-spacing:10px;
   margin-bottom:34px;
+  color:white;
 }
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .footer-nav{
   display:flex;
@@ -734,7 +751,7 @@ body{
   align-items:center;
   flex-wrap:wrap;
   gap:14px;
-  margin-bottom:48px;
+  margin-bottom:52px;
 }
 
 .footer-nav a{
@@ -771,32 +788,48 @@ body{
   width:100%;
 }
 
+/* =========================
+   FOLLOW TITLE
+========================= */
+
 .footer-follow-title{
   font-size:22px;
   font-weight:700;
   letter-spacing:1px;
-  margin-bottom:22px;
+  margin-bottom:24px;
+  color:white;
 }
+
+/* =========================
+   ICON GRID
+========================= */
 
 .footer-icon-grid{
   display:flex;
   justify-content:center;
   align-items:center;
-  flex-wrap:wrap;
-  max-width:760px;
+  flex-wrap:nowrap;
+  max-width:950px;
   margin:0 auto 46px;
   border:1px solid rgba(255,255,255,0.16);
 }
 
 .footer-icon-grid a{
-  width:95px;
-  height:86px;
+  position:relative;
+  overflow:hidden;
+
+  width:105px;
+  height:88px;
+
   display:flex;
   justify-content:center;
   align-items:center;
+
   color:white;
   text-decoration:none;
+
   border-right:1px solid rgba(255,255,255,0.16);
+
   transition:0.35s ease;
 }
 
@@ -804,10 +837,9 @@ body{
   border-right:none;
 }
 
-.footer-icon-grid a:hover{
-  background:white;
-  color:black;
-}
+/* =========================
+   SVG ICONS
+========================= */
 
 .footer-icon-grid svg{
   width:30px;
@@ -818,7 +850,75 @@ body{
 
 .footer-icon-grid a:hover svg{
   color:black;
+  transform:translateY(-10px);
 }
+
+/* =========================
+   TEXT ICONS
+========================= */
+
+.icon-text{
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:2px;
+  transition:0.35s ease;
+}
+
+.footer-icon-grid a:hover .icon-text{
+  color:black;
+  transform:translateY(-10px);
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.footer-icon-grid a:hover{
+  background:white;
+  color:black;
+}
+
+/* =========================
+   LABELS ON HOVER
+========================= */
+
+.footer-icon-grid a::after{
+  content:attr(aria-label);
+
+  position:absolute;
+  bottom:12px;
+  left:50%;
+
+  transform:
+    translateX(-50%)
+    translateY(8px);
+
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:700;
+  text-transform:uppercase;
+
+  opacity:0;
+
+  color:black;
+
+  transition:0.35s ease;
+
+  pointer-events:none;
+  white-space:nowrap;
+}
+
+.footer-icon-grid a:hover::after{
+  opacity:1;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
 
 .footer-copy{
   color:rgba(255,255,255,0.34);
@@ -827,10 +927,14 @@ body{
   text-transform:uppercase;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width:768px){
 
   .site-footer{
-    padding:72px 22px 42px;
+    padding:72px 20px 42px;
   }
 
   .footer-brand{
@@ -840,7 +944,7 @@ body{
 
   .footer-nav{
     gap:10px;
-    margin-bottom:38px;
+    margin-bottom:42px;
   }
 
   .footer-nav a{
@@ -848,7 +952,12 @@ body{
     letter-spacing:2px;
   }
 
+  .footer-follow-title{
+    font-size:18px;
+  }
+
   .footer-icon-grid{
+    flex-wrap:wrap;
     max-width:360px;
   }
 
@@ -857,8 +966,12 @@ body{
     height:78px;
   }
 
-}
+  .footer-icon-grid svg{
+    width:26px;
+    height:26px;
+  }
 
+}
 /* HOMEPAGE HERO ANIMATION */
 
 .hero{
