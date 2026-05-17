@@ -1233,3 +1233,122 @@ body{
     padding:24px;
   }
 }
+
+/* LISTEN POPUP */
+
+.listen-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.78);
+  z-index:99999;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:0.35s ease;
+}
+
+.listen-popup.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.listen-popup-box{
+  position:relative;
+  width:460px;
+  max-width:calc(100vw - 34px);
+  background:#080808;
+  border:1px solid rgba(255,255,255,0.18);
+  padding:28px;
+  text-align:center;
+  box-shadow:0 30px 90px rgba(0,0,0,0.65);
+}
+
+.listen-close{
+  position:absolute;
+  top:14px;
+  right:16px;
+  background:none;
+  border:none;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.listen-cover img{
+  width:100%;
+  max-width:300px;
+  display:block;
+  margin:0 auto 24px;
+  border:1px solid rgba(255,255,255,0.12);
+}
+
+.listen-popup-box h2{
+  font-size:28px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.listen-popup-box p{
+  color:rgba(255,255,255,0.6);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:34px;
+}
+
+.listen-popup-box h3{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin-bottom:18px;
+}
+
+.listen-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border:1px solid rgba(255,255,255,0.22);
+}
+
+.listen-grid a{
+  color:white;
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:800;
+  padding:22px 12px;
+  border-right:1px solid rgba(255,255,255,0.22);
+  border-bottom:1px solid rgba(255,255,255,0.22);
+  transition:0.3s ease;
+}
+
+.listen-grid a:nth-child(2),
+.listen-grid a:nth-child(4){
+  border-right:none;
+}
+
+.listen-grid a:nth-child(3),
+.listen-grid a:nth-child(4){
+  border-bottom:none;
+}
+
+.listen-grid a:hover{
+  background:white;
+  color:black;
+}
+
+@media (max-width:600px){
+  .listen-grid{
+    grid-template-columns:1fr;
+  }
+
+  .listen-grid a{
+    border-right:none;
+  }
+
+  .listen-grid a:nth-child(3){
+    border-bottom:1px solid rgba(255,255,255,0.22);
+  }
+}
