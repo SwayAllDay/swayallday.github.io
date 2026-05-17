@@ -730,18 +730,6 @@ body{
 }
 
 /* =========================
-   BRAND
-========================= */
-
-.footer-brand{
-  font-size:30px;
-  font-weight:800;
-  letter-spacing:10px;
-  margin-bottom:34px;
-  color:white;
-}
-
-/* =========================
    NAVIGATION
 ========================= */
 
@@ -806,7 +794,7 @@ body{
 
 .footer-icon-grid{
   display:grid;
-  grid-template-columns:repeat(6, 110px);
+  grid-template-columns:repeat(6, 155px);
   justify-content:center;
 
   width:fit-content;
@@ -820,8 +808,8 @@ body{
   position:relative;
   overflow:hidden;
 
-  width:110px;
-  height:88px;
+  width:155px;
+  height:90px;
 
   display:flex;
   justify-content:center;
@@ -844,8 +832,8 @@ body{
 ========================= */
 
 .footer-icon-grid svg{
-  width:30px;
-  height:30px;
+  width:32px;
+  height:32px;
   color:white;
   transition:0.35s ease;
 }
@@ -963,11 +951,6 @@ body{
     padding:72px 20px 42px;
   }
 
-  .footer-brand{
-    font-size:24px;
-    letter-spacing:8px;
-  }
-
   .footer-nav{
     gap:10px;
     margin-bottom:42px;
@@ -983,12 +966,12 @@ body{
   }
 
   .footer-icon-grid{
-    grid-template-columns:repeat(3, 90px);
+    grid-template-columns:repeat(3, 110px);
   }
 
   .footer-icon-grid a{
-    width:90px;
-    height:78px;
+    width:110px;
+    height:80px;
 
     border-right:1px solid rgba(255,255,255,0.16);
     border-bottom:1px solid rgba(255,255,255,0.16);
@@ -1022,7 +1005,6 @@ body{
 
 }
 
-}
 /* FEATURED RELEASE - HOMEPAGE */
 
 .featured-release{
