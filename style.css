@@ -805,10 +805,9 @@ body{
 ========================= */
 
 .footer-icon-grid{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:nowrap;
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  width:100%;
   max-width:950px;
   margin:0 auto 46px;
   border:1px solid rgba(255,255,255,0.16);
@@ -818,7 +817,6 @@ body{
   position:relative;
   overflow:hidden;
 
-  width:105px;
   height:88px;
 
   display:flex;
@@ -833,7 +831,7 @@ body{
   transition:0.35s ease;
 }
 
-.footer-icon-grid a:last-child{
+.footer-icon-grid a:nth-child(6){
   border-right:none;
 }
 
@@ -943,6 +941,10 @@ body{
   transition:0.3s ease;
 }
 
+.footer-legal a:visited{
+  color:rgba(255,255,255,0.58);
+}
+
 .footer-legal a:hover{
   color:white;
 }
@@ -977,13 +979,25 @@ body{
   }
 
   .footer-icon-grid{
-    flex-wrap:wrap;
+    grid-template-columns:repeat(3, 1fr);
     max-width:360px;
   }
 
   .footer-icon-grid a{
-    width:90px;
     height:78px;
+    border-right:1px solid rgba(255,255,255,0.16);
+    border-bottom:1px solid rgba(255,255,255,0.16);
+  }
+
+  .footer-icon-grid a:nth-child(3),
+  .footer-icon-grid a:nth-child(6){
+    border-right:none;
+  }
+
+  .footer-icon-grid a:nth-child(4),
+  .footer-icon-grid a:nth-child(5),
+  .footer-icon-grid a:nth-child(6){
+    border-bottom:none;
   }
 
   .footer-icon-grid svg{
@@ -1000,6 +1014,8 @@ body{
     justify-content:center;
     gap:18px;
   }
+
+}
 
 }
 /* FEATURED RELEASE - HOMEPAGE */
