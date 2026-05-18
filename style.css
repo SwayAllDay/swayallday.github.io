@@ -1663,3 +1663,14 @@ body{
   }
 
 }
+
+/* PAGE TRANSITIONS */
+
+body{
+  opacity:1;
+  transition:opacity 0.45s ease;
+}
+
+body.page-fade-out{
+  opacity:0;
+}
