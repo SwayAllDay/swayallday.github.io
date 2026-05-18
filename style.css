@@ -1568,3 +1568,98 @@ body{
   }
 
 }
+
+/* =========================
+   MOBILE HERO VIDEO
+========================= */
+
+@media (max-width:900px){
+
+  .hero{
+    height:100svh;
+    min-height:100svh;
+    overflow:hidden;
+  }
+
+  .hero-video{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center center;
+
+    transform:scale(1.12);
+  }
+
+  .hero-overlay{
+    background:
+      linear-gradient(
+        to top,
+        rgba(0,0,0,0.88) 0%,
+        rgba(0,0,0,0.38) 45%,
+        rgba(0,0,0,0.55) 100%
+      );
+  }
+
+  /* =========================
+     MOBILE CAROUSEL
+  ========================= */
+
+  .hero-carousel{
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:24px;
+
+    width:100%;
+
+    padding:0 18px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    display:flex;
+    justify-content:flex-start;
+
+    gap:14px;
+
+    transform:translateY(40px);
+
+    scrollbar-width:none;
+
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .hero-carousel::-webkit-scrollbar{
+    display:none;
+  }
+
+  .hero-carousel.visible{
+    transform:translateY(0);
+  }
+
+  .hero-release{
+    flex:0 0 120px;
+
+    width:120px;
+  }
+
+  .hero-release img{
+    width:120px;
+
+    border:1px solid rgba(255,255,255,0.14);
+  }
+
+  .hero-release span{
+    font-size:9px;
+
+    letter-spacing:1.5px;
+
+    margin-top:10px;
+
+    line-height:1.4;
+  }
+
+}
