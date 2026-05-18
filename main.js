@@ -94,6 +94,6 @@ if (heroCarousel) {
 
     heroCarousel.classList.add("visible");
 
-  }, 5000);
+  }, 3000);
 
 }
