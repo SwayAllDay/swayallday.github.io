@@ -86,3 +86,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+const heroCarousel = document.getElementById("heroCarousel");
+
+if (heroCarousel) {
+
+  setTimeout(function () {
+
+    heroCarousel.classList.add("visible");
+
+  }, 5000);
+
+}
