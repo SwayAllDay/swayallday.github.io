@@ -55,38 +55,43 @@ body{
   border-bottom:1px solid white;
 }
 
-/* HOMEPAGE VIDEO HERO */
-
-.hero{
-  background-image:none !important;
-  overflow:hidden;
-}
+/* =========================
+   HERO VIDEO
+========================= */
 
 .hero-video{
   position:absolute;
   inset:0;
+  overflow:hidden;
+  z-index:-2;
+  background:black;
+}
+
+.hero-video video{
   width:100%;
   height:100%;
-  object-fit:cover;
-  z-index:0;
-  animation:heroVideoZoom 18s ease forwards;
+
+  object-fit:contain;
+  object-position:center center;
+
+  background:black;
 }
 
-.hero-overlay{
-  z-index:1;
-}
+/* DARK OVERLAY */
 
-.hero-text{
-  z-index:2;
-}
+.hero-video::after{
+  content:"";
+  position:absolute;
+  inset:0;
 
-@keyframes heroVideoZoom{
-  from{
-    transform:scale(1);
-  }
-  to{
-    transform:scale(1.08);
-  }
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.62)
+    );
+
+  pointer-events:none;
 }
 
 .about-preview{
