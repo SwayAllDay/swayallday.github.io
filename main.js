@@ -13,18 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const triggers = document.querySelectorAll(".music-popup-trigger");
 
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-  function openApp(appLink, webLink) {
-    if (!isMobile) {
+  function openSmartLink(appLink, webLink) {
+    if (!isMobile || !appLink) {
       window.open(webLink, "_blank", "noopener,noreferrer");
       return;
     }
 
+    const start = Date.now();
     window.location.href = appLink;
 
     setTimeout(function () {
-      window.location.href = webLink;
+      if (Date.now() - start < 1800) {
+        window.location.href = webLink;
+      }
     }, 1200);
   }
 
@@ -44,22 +47,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
       popupSpotify.onclick = function(e) {
         e.preventDefault();
-        openApp(trigger.dataset.spotifyApp, trigger.dataset.spotify);
+        openSmartLink(trigger.dataset.spotifyApp, trigger.dataset.spotify);
       };
 
       popupApple.onclick = function(e) {
         e.preventDefault();
-        openApp(trigger.dataset.appleApp, trigger.dataset.apple);
+        openSmartLink(trigger.dataset.appleApp, trigger.dataset.apple);
       };
 
       popupYTMusic.onclick = function(e) {
         e.preventDefault();
-        openApp(trigger.dataset.ytmusic, trigger.dataset.ytmusic);
+        openSmartLink(trigger.dataset.ytmusicApp, trigger.dataset.ytmusic);
       };
 
       popupYouTube.onclick = function(e) {
         e.preventDefault();
-        openApp(trigger.dataset.youtubeApp, trigger.dataset.youtube);
+        openSmartLink(trigger.dataset.youtubeApp, trigger.dataset.youtube);
       };
 
       popup.classList.add("active");
