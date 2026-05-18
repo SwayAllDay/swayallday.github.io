@@ -97,3 +97,30 @@ if (heroCarousel) {
   }, 3000);
 
 }
+
+/* PAGE TRANSITIONS */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const internalLinks = document.querySelectorAll("a[href]");
+
+  internalLinks.forEach(function(link) {
+    const href = link.getAttribute("href");
+
+    if (
+      href &&
+      !href.startsWith("#") &&
+      !href.startsWith("http") &&
+      !link.hasAttribute("target")
+    ) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        document.body.classList.add("page-fade-out");
+
+        setTimeout(function() {
+          window.location.href = href;
+        }, 420);
+      });
+    }
+  });
+});
