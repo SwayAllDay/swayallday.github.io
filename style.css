@@ -107,6 +107,93 @@ body{
   z-index:2;
 }
 
+/* HERO CAROUSEL */
+
+.hero-carousel{
+  position:absolute;
+
+  left:50%;
+  bottom:60px;
+
+  transform:translateX(-50%) translateY(40px);
+
+  display:flex;
+  gap:26px;
+
+  z-index:3;
+
+  opacity:0;
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+.hero-carousel.visible{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+
+.hero-release{
+  width:180px;
+
+  cursor:pointer;
+
+  transition:0.45s ease;
+}
+
+.hero-release img{
+  width:100%;
+  display:block;
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  transition:0.45s ease;
+}
+
+.hero-release span{
+  display:block;
+
+  margin-top:14px;
+
+  text-align:center;
+
+  color:white;
+
+  text-transform:uppercase;
+  letter-spacing:2px;
+
+  font-size:11px;
+}
+
+.hero-release:hover{
+  transform:translateY(-10px);
+}
+
+.hero-release:hover img{
+  border-color:rgba(255,255,255,0.35);
+  transform:scale(1.03);
+}
+
+@media (max-width:900px){
+
+  .hero-carousel{
+    width:100%;
+    padding:0 24px;
+
+    overflow-x:auto;
+
+    justify-content:flex-start;
+
+    bottom:40px;
+  }
+
+  .hero-release{
+    flex:0 0 150px;
+  }
+
+}
+
 .about-preview{
   min-height:60vh;
   background:#050505;
