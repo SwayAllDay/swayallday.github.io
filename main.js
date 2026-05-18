@@ -13,6 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const triggers = document.querySelectorAll(".music-popup-trigger");
 
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  function openApp(appLink, webLink) {
+    if (!isMobile) {
+      window.open(webLink, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    window.location.href = appLink;
+
+    setTimeout(function () {
+      window.location.href = webLink;
+    }, 1200);
+  }
+
   triggers.forEach(function(trigger) {
 
     trigger.addEventListener("click", function () {
@@ -26,6 +41,26 @@ document.addEventListener("DOMContentLoaded", function () {
       popupApple.href = trigger.dataset.apple;
       popupYTMusic.href = trigger.dataset.ytmusic;
       popupYouTube.href = trigger.dataset.youtube;
+
+      popupSpotify.onclick = function(e) {
+        e.preventDefault();
+        openApp(trigger.dataset.spotifyApp, trigger.dataset.spotify);
+      };
+
+      popupApple.onclick = function(e) {
+        e.preventDefault();
+        openApp(trigger.dataset.appleApp, trigger.dataset.apple);
+      };
+
+      popupYTMusic.onclick = function(e) {
+        e.preventDefault();
+        openApp(trigger.dataset.ytmusic, trigger.dataset.ytmusic);
+      };
+
+      popupYouTube.onclick = function(e) {
+        e.preventDefault();
+        openApp(trigger.dataset.youtubeApp, trigger.dataset.youtube);
+      };
 
       popup.classList.add("active");
 
