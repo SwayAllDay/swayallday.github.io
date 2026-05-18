@@ -56,49 +56,55 @@ body{
 }
 
 /* =========================
-   HERO VIDEO
+   HERO VIDEO FIX
 ========================= */
+
+.hero{
+  position:relative;
+  height:100vh;
+  width:100%;
+  overflow:hidden;
+  background:#050505;
+}
 
 .hero-video{
   position:absolute;
   inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
   overflow:hidden;
-  z-index:-2;
-  background:black;
 }
 
 .hero-video video{
   position:absolute;
-
   top:50%;
   left:50%;
-
-  width:100vw;
-  height:100vh;
-
+  width:100%;
+  height:100%;
   object-fit:cover;
-
-  transform:
-    translate(-47%, -50%);
-
-  background:black;
+  object-position:center center;
+  transform:translate(-50%, -50%);
 }
-
-/* DARK OVERLAY */
 
 .hero-video::after{
   content:"";
   position:absolute;
   inset:0;
-
   background:
     linear-gradient(
       to bottom,
       rgba(0,0,0,0.42),
       rgba(0,0,0,0.64)
     );
-
+  z-index:1;
   pointer-events:none;
+}
+
+.hero .navbar,
+.hero-text{
+  position:relative;
+  z-index:2;
 }
 
 .about-preview{
