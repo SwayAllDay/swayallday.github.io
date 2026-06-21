@@ -1674,3 +1674,54 @@ body{
 body.page-fade-out{
   opacity:0;
 }
+/* HEADER SOCIAL ICONS */
+
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.header-socials{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.header-socials a{
+  color:white;
+  opacity:0.72;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s ease;
+}
+
+.header-socials a:hover{
+  opacity:1;
+  transform:translateY(-2px);
+}
+
+.header-socials svg{
+  width:17px;
+  height:17px;
+  display:block;
+}
+
+.header-socials a[aria-label="Facebook"] svg{
+  width:12px;
+}
+
+/* keep header aligned */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+@media (max-width:900px){
+  .header-socials{
+    display:none;
+  }
+}
