@@ -2221,9 +2221,12 @@ body.page-fade-out{
 }
 
 .zoya-unlock-content > span{
-  color:white !important;
-  font-weight:800 !important;
-  opacity:1;
+  color:white;
+  font-weight:800;
+
+  font-size:15px;
+  letter-spacing:4px;
+  text-transform:uppercase;
 }
 
 .zoya-unlock-section{
