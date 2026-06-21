@@ -150,6 +150,79 @@
 
 </section>
 
+  <section class="zoya-unlock-section">
+
+  <div class="zoya-unlock-card">
+
+    <div class="zoya-unlock-image">
+      <img src="https://newsletter.zoyasmusic.com/assets/cover.jpg" alt="ZOYA early access">
+    </div>
+
+    <div class="zoya-unlock-content" id="zoyaSignupStep">
+
+      <span>Private Preview</span>
+
+      <h2>Unlock The Next ZOYA Release</h2>
+
+      <p>
+        Join the private list and get early access before the release goes live.
+      </p>
+
+      <form id="zoyaSignupForm">
+        <input type="text" id="zoyaName" placeholder="Your name" required>
+        <input type="email" id="zoyaEmail" placeholder="Your email" required>
+
+        <label class="zoya-consent">
+          <input type="checkbox" required>
+          <span>I agree to receive emails from ZOYA and can unsubscribe anytime.</span>
+        </label>
+
+        <button type="submit">Get Free Access</button>
+      </form>
+
+      <p id="zoyaErrorMessage" class="zoya-error hidden">
+        Something went wrong. Please try again.
+      </p>
+
+    </div>
+
+    <div class="zoya-unlock-content hidden" id="zoyaDownloadStep">
+
+      <span>Unlocked</span>
+
+      <h2>Private Preview Unlocked</h2>
+
+      <div class="zoya-custom-player">
+
+        <audio id="zoyaAudioPlayer" preload="auto">
+          <source src="https://newsletter.zoyasmusic.com/downloads/zoya-unreleased.mp3?v=20" type="audio/mpeg">
+        </audio>
+
+        <button id="zoyaPlayPauseBtn" class="zoya-play-circle" type="button">▶</button>
+
+        <div class="zoya-track-title">ZOYA - ID</div>
+
+        <div class="zoya-progress-wrap">
+          <div id="zoyaProgressBar" class="zoya-progress-bar"></div>
+        </div>
+
+        <div class="zoya-time-row">
+          <span id="zoyaCurrentTime">0:00</span>
+          <span id="zoyaDuration">0:00</span>
+        </div>
+
+      </div>
+
+      <button id="zoyaSpotifyRevealBtn" type="button">
+        Follow On Spotify
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
   <section class="about-preview">
     <div class="about-inner">
       <h2>About ZOYA</h2>
