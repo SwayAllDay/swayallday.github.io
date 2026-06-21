@@ -1904,3 +1904,62 @@ body.page-fade-out{
     padding:140px 22px 80px;
   }
 }
+
+```css
+/* MERCH COMING SOON */
+
+.merch-coming-soon{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#050505;
+  padding:120px 30px;
+}
+
+.merch-coming-soon-content{
+  text-align:center;
+  max-width:700px;
+}
+
+.merch-coming-soon-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:320px;
+  height:72px;
+
+  border:1px solid rgba(255,255,255,0.18);
+
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:8px;
+  text-transform:uppercase;
+
+  margin-bottom:40px;
+
+  backdrop-filter:blur(8px);
+}
+
+.merch-coming-soon-content p{
+  color:rgba(255,255,255,0.85);
+  font-size:18px;
+  line-height:1.8;
+}
+
+@media (max-width:768px){
+
+  .merch-coming-soon-badge{
+    width:260px;
+    height:64px;
+    font-size:12px;
+    letter-spacing:6px;
+  }
+
+  .merch-coming-soon-content p{
+    font-size:16px;
+  }
+}
+```
+
