@@ -2097,10 +2097,34 @@ body.page-fade-out{
 
 .zoya-consent{
   display:flex;
+  align-items:flex-start;
   gap:10px;
-  color:rgba(255,255,255,0.62);
-  font-size:12px;
+
+  margin:2px 0 14px;
+
+  color:rgba(255,255,255,0.68);
+
+  font-size:11px;
   line-height:1.5;
+  letter-spacing:0.4px;
+  text-transform:none;
+
+  text-align:left;
+}
+
+.zoya-consent input{
+  width:13px;
+  height:13px;
+
+  flex:0 0 13px;
+
+  margin:2px 0 0;
+  accent-color:white;
+}
+
+.zoya-consent span{
+  display:block;
+  max-width:360px;
 }
 
 #zoyaSignupForm button,
