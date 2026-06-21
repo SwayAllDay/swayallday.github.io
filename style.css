@@ -2098,33 +2098,32 @@ body.page-fade-out{
 .zoya-consent{
   display:flex;
   align-items:flex-start;
-  gap:10px;
+  gap:12px;
 
-  margin:2px 0 14px;
+  margin:18px 0 28px;
 
-  color:rgba(255,255,255,0.68);
+  color:rgba(255,255,255,0.9);
 
-  font-size:11px;
-  line-height:1.5;
-  letter-spacing:0.4px;
+  font-size:18px;
+  line-height:1.7;
+  letter-spacing:0;
   text-transform:none;
 
   text-align:left;
 }
 
 .zoya-consent input{
-  width:13px;
-  height:13px;
+  width:16px;
+  height:16px;
 
-  flex:0 0 13px;
+  flex:0 0 16px;
 
-  margin:2px 0 0;
+  margin-top:8px;
   accent-color:white;
 }
 
 .zoya-consent span{
   display:block;
-  max-width:360px;
 }
 
 #zoyaSignupForm button,
