@@ -2300,3 +2300,35 @@ body.page-fade-out{
   position:relative;
   z-index:2;
 }
+
+.unlock-message{
+  color:rgba(255,255,255,0.88);
+
+  font-size:18px;
+  line-height:1.9;
+
+  font-weight:300;
+
+  letter-spacing:0;
+
+  text-transform:none;
+
+  max-width:460px;
+}
+
+.unlock-message strong{
+  color:white;
+  font-weight:700;
+}
+
+.unlock-message .signature{
+  display:block;
+
+  margin-top:22px;
+
+  font-size:17px;
+
+  color:white;
+
+  font-weight:600;
+}
