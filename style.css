@@ -1674,28 +1674,63 @@ body{
 body.page-fade-out{
   opacity:0;
 }
-/* HEADER SOCIAL ICONS */
+
+/* =========================
+   PREMIUM HEADER
+========================= */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:32px 40px;
+}
+
+/* LEFT SIDE */
 
 .nav-left{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:28px;
 }
+
+/* LOGO */
+
+.nav-logo{
+  color:white;
+  text-decoration:none;
+
+  font-size:16px;
+  font-weight:800;
+
+  letter-spacing:7px;
+  text-transform:uppercase;
+
+  transition:0.3s ease;
+}
+
+.nav-logo:hover{
+  opacity:0.8;
+}
+
+/* SOCIAL ICONS */
 
 .header-socials{
   display:flex;
   align-items:center;
-  gap:16px;
+  gap:18px;
 }
 
 .header-socials a{
   color:white;
-  opacity:0.72;
-  text-decoration:none;
+  opacity:0.75;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  transition:0.3s ease;
+
+  transition:all 0.3s ease;
 }
 
 .header-socials a:hover{
@@ -1704,24 +1739,60 @@ body.page-fade-out{
 }
 
 .header-socials svg{
-  width:17px;
-  height:17px;
+  width:16px;
+  height:16px;
   display:block;
 }
 
+/* Facebook slightly narrower */
+
 .header-socials a[aria-label="Facebook"] svg{
-  width:12px;
+  width:11px;
 }
 
-/* keep header aligned */
-.navbar{
+/* NAVIGATION */
+
+.navbar nav{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  gap:34px;
 }
+
+.navbar nav a{
+  color:white;
+  text-decoration:none;
+
+  font-size:11px;
+  font-weight:700;
+
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  opacity:0.82;
+
+  transition:all 0.3s ease;
+}
+
+.navbar nav a:hover{
+  opacity:1;
+  transform:translateY(-2px);
+}
+
+/* MOBILE */
 
 @media (max-width:900px){
+
   .header-socials{
     display:none;
   }
+
+  .navbar{
+    padding:24px 20px;
+  }
+
+  .nav-logo{
+    font-size:14px;
+    letter-spacing:5px;
+  }
+
 }
