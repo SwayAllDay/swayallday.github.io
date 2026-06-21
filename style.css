@@ -2300,3 +2300,39 @@ body.page-fade-out{
   position:relative;
   z-index:2;
 }
+
+/* AFTER UNLOCK: HIDE ARTWORK AND CENTER CONTENT */
+
+.zoya-unlock-card.unlocked{
+  display:block;
+  max-width:720px;
+}
+
+.zoya-unlock-card.unlocked .zoya-unlock-image{
+  display:none;
+}
+
+.zoya-unlock-card.unlocked .zoya-unlock-content{
+  padding:72px 64px;
+  text-align:left;
+}
+
+.zoya-unlock-card.unlocked .unlock-message{
+  max-width:100%;
+}
+
+.zoya-unlock-card.unlocked .zoya-custom-player{
+  margin-top:34px;
+}
+
+@media (max-width:768px){
+
+  .zoya-unlock-card.unlocked{
+    max-width:100%;
+  }
+
+  .zoya-unlock-card.unlocked .zoya-unlock-content{
+    padding:48px 28px;
+  }
+
+}
