@@ -39,17 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     errorMessage.classList.add("hidden");
 
-    const payload = {
-      name: document.getElementById("zoyaName").value.trim(),
-      email: document.getElementById("zoyaEmail").value.trim(),
-      source: "Website",
+   const payload = {
+  name: document.getElementById("zoyaName").value.trim(),
+  email: document.getElementById("zoyaEmail").value.trim(),
+  source: "Website",
 
-      utm_source: getUTM("utm_source"),
-      utm_medium: getUTM("utm_medium"),
-      utm_campaign: getUTM("utm_campaign"),
-      utm_content: getUTM("utm_content"),
-      utm_adset: getUTM("utm_adset")
-    };
+  utm_source: getUTM("utm_source") || "website",
+  utm_medium: getUTM("utm_medium") || "homepage",
+  utm_campaign: getUTM("utm_campaign") || "organic_traffic",
+  utm_adset: getUTM("utm_adset") || "organic_followers",
+  utm_content: getUTM("utm_content") || "fan"
+};
 
     if (typeof fbq === "function") {
       fbq("track", "Lead");
