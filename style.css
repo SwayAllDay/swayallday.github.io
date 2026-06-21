@@ -1676,15 +1676,27 @@ body.page-fade-out{
 }
 
 /* =========================
-   PREMIUM HEADER
+   LUXURY HEADER
 ========================= */
 
 .navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
 
-  padding:32px 40px;
+  padding:30px 42px;
+
+  background:rgba(5,5,5,0.34);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 /* LEFT SIDE */
@@ -1692,7 +1704,7 @@ body.page-fade-out{
 .nav-left{
   display:flex;
   align-items:center;
-  gap:28px;
+  gap:26px;
 }
 
 /* LOGO */
@@ -1701,36 +1713,57 @@ body.page-fade-out{
   color:white;
   text-decoration:none;
 
-  font-size:36px;
+  font-size:30px;
   font-weight:900;
 
   letter-spacing:9px;
   text-transform:uppercase;
-
   line-height:1;
 
   transition:0.3s ease;
 }
 
-/* SOCIAL ICONS */
+.nav-logo:hover{
+  opacity:0.82;
+}
+
+/* SUBTLE DIVIDER */
 
 .header-socials{
+  position:relative;
+
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:15px;
+
+  padding-left:26px;
 }
+
+.header-socials::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+
+  width:1px;
+  height:18px;
+
+  transform:translateY(-50%);
+
+  background:rgba(255,255,255,0.22);
+}
+
+/* SOCIAL ICONS */
 
 .header-socials a{
   color:white;
-  opacity:0.85;
-
-  font-weight:700;
+  opacity:0.62;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  transition:all 0.3s ease;
+  transition:0.35s ease;
 }
 
 .header-socials a:hover{
@@ -1739,15 +1772,13 @@ body.page-fade-out{
 }
 
 .header-socials svg{
-  width:16px;
-  height:16px;
+  width:15px;
+  height:15px;
   display:block;
 }
 
-/* Facebook slightly narrower */
-
 .header-socials a[aria-label="Facebook"] svg{
-  width:11px;
+  width:10px;
 }
 
 /* NAVIGATION */
@@ -1755,7 +1786,7 @@ body.page-fade-out{
 .navbar nav{
   display:flex;
   align-items:center;
-  gap:34px;
+  gap:36px;
 }
 
 .navbar nav a{
@@ -1765,12 +1796,12 @@ body.page-fade-out{
   font-size:11px;
   font-weight:800;
 
-  letter-spacing:2px;
+  letter-spacing:2.4px;
   text-transform:uppercase;
 
-  opacity:0.9;
+  opacity:0.82;
 
-  transition:all 0.3s ease;
+  transition:0.35s ease;
 }
 
 .navbar nav a:hover{
@@ -1782,17 +1813,26 @@ body.page-fade-out{
 
 @media (max-width:900px){
 
+  .navbar{
+    padding:24px 22px;
+  }
+
+  .nav-logo{
+    font-size:24px;
+    letter-spacing:7px;
+  }
+
   .header-socials{
     display:none;
   }
 
-  .navbar{
-    padding:24px 20px;
+  .navbar nav{
+    gap:18px;
   }
 
-  .nav-logo{
-    font-size:14px;
-    letter-spacing:5px;
+  .navbar nav a{
+    font-size:10px;
+    letter-spacing:1.8px;
   }
 
 }
