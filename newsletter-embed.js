@@ -55,8 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
       fbq("track", "Lead");
     }
 
-    stepSignup.classList.add("hidden");
-    stepDownload.classList.remove("hidden");
+ stepSignup.classList.add("hidden");
+stepDownload.classList.remove("hidden");
+
+document.querySelector(".zoya-unlock-card").classList.add("unlocked");
 
     if (audioPlayer) {
       audioPlayer.load();
