@@ -2010,3 +2010,191 @@ body.page-fade-out{
 
 }
 
+/* =========================
+   ZOYA EARLY ACCESS EMBED
+========================= */
+
+.zoya-unlock-section{
+  background:#050505;
+  padding:120px 28px;
+  border-top:1px solid rgba(255,255,255,0.06);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.zoya-unlock-card{
+  max-width:1050px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:0.95fr 1.05fr;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.018);
+  box-shadow:0 40px 120px rgba(0,0,0,0.55);
+}
+
+.zoya-unlock-image img{
+  width:100%;
+  height:100%;
+  min-height:560px;
+  object-fit:cover;
+  display:block;
+  filter:grayscale(1) contrast(1.05);
+}
+
+.zoya-unlock-content{
+  padding:70px 64px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:left;
+}
+
+.zoya-unlock-content span{
+  margin-bottom:18px;
+  color:rgba(255,255,255,0.55);
+  font-size:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.zoya-unlock-content h2{
+  color:white;
+  font-size:clamp(34px, 4vw, 58px);
+  line-height:1.05;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  margin-bottom:22px;
+}
+
+.zoya-unlock-content p{
+  color:rgba(255,255,255,0.7);
+  font-size:17px;
+  line-height:1.8;
+  margin-bottom:34px;
+}
+
+#zoyaSignupForm{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+#zoyaSignupForm input[type="text"],
+#zoyaSignupForm input[type="email"]{
+  width:100%;
+  height:56px;
+  background:rgba(255,255,255,0.035);
+  border:1px solid rgba(255,255,255,0.16);
+  color:white;
+  padding:0 18px;
+  font-size:14px;
+  outline:none;
+}
+
+#zoyaSignupForm input::placeholder{
+  color:rgba(255,255,255,0.45);
+}
+
+.zoya-consent{
+  display:flex;
+  gap:10px;
+  color:rgba(255,255,255,0.62);
+  font-size:12px;
+  line-height:1.5;
+}
+
+#zoyaSignupForm button,
+#zoyaSpotifyRevealBtn{
+  height:58px;
+  background:white;
+  color:black;
+  border:none;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:0.35s ease;
+}
+
+#zoyaSignupForm button:hover,
+#zoyaSpotifyRevealBtn:hover{
+  opacity:0.86;
+  transform:translateY(-2px);
+}
+
+.zoya-custom-player{
+  margin:10px 0 24px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:rgba(255,255,255,0.05);
+}
+
+.zoya-play-circle{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  margin:0 auto 18px;
+  display:block;
+  padding:0;
+}
+
+.zoya-track-title{
+  text-align:center;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:16px;
+}
+
+.zoya-progress-wrap{
+  width:100%;
+  height:6px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.16);
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.zoya-progress-bar{
+  height:100%;
+  width:0%;
+  background:white;
+}
+
+.zoya-time-row{
+  display:flex;
+  justify-content:space-between;
+  margin-top:8px;
+  font-size:11px;
+  color:rgba(255,255,255,0.55);
+}
+
+#zoyaSpotifyRevealBtn{
+  background:#1DB954;
+  color:white;
+}
+
+.zoya-error{
+  color:#ff7777;
+  font-size:13px;
+}
+
+.hidden{
+  display:none !important;
+}
+
+@media (max-width:900px){
+  .zoya-unlock-card{
+    grid-template-columns:1fr;
+  }
+
+  .zoya-unlock-image img{
+    min-height:360px;
+  }
+
+  .zoya-unlock-content{
+    padding:46px 28px;
+    text-align:center;
+  }
+}
+
