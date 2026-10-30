@@ -1,0 +1,19 @@
+{
+  // Handles only www.zoyasmusic.com/api/* ; every other page is still served by GitHub Pages.
+  "name": "zoya-site-analytics",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "www.zoyasmusic.com/api/*", "zone_name": "zoyasmusic.com" }
+  ],
+  "observability": { "enabled": true },
+  "analytics_engine_datasets": [
+    { "binding": "ANALYTICS", "dataset": "zoya_site" }
+  ],
+  "vars": {
+    // Not secret: your Cloudflare account ID (same account as the links page)
+    "CF_ACCOUNT_ID": "52b1d69afccbac8b1cf7d9e9004ac404"
+  }
+  // Secrets (set in Cloudflare, never in this file): STATS_PASSWORD, CF_ANALYTICS_TOKEN
+}

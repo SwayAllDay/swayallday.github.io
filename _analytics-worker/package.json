@@ -1,0 +1,14 @@
+{
+  "name": "zoya-site-analytics",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Visit and click analytics for www.zoyasmusic.com, on Cloudflare Workers",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
